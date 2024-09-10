@@ -12,7 +12,7 @@ Unleash the powers and customisations of your ordinary Settings app.....
 
 Simply install the apk file from the above link and enjoy the feel of Latest RisingOS.
 
-(Download Here)[https://www.pling.com/p/2121911/]
+[Download Here](https://www.pling.com/p/2121911/)
 
 ## Usage
 1. you can customise wallpapers and other styles with it.
