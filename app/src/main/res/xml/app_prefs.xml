@@ -1,0 +1,24 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.preference.Preference
+        android:key="all_apps"
+        android:title="All applications"
+        android:summary="Manage all applications" />
+    <androidx.preference.Preference
+        android:key="default_apps"
+        android:title="Default applications"
+        android:summary="Manage default applications" />
+    <androidx.preference.Preference
+        android:key="quick_switch"
+        android:title="Quick switch"
+        android:summary="Change your default homescreen" />
+    <androidx.preference.Preference
+        android:key="assistant"
+        android:title="Assistant"
+        android:summary="Hey google and other assistant settings" />
+    <androidx.preference.Preference
+        android:key="perm_manage"
+        android:title="Permission manager"
+        android:summary="Manage applications permissions" />
+
+</androidx.preference.PreferenceScreen>

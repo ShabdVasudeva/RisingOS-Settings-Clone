@@ -1,0 +1,32 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.Preference
+        android:key="modify_system"
+        android:title="Modify system settings"
+        android:summary="Manage permission for modify system settings"
+        android:icon="@drawable/modify" />
+    <androidx.preference.Preference
+        android:key="usage_access"
+        android:title="Usage access"
+        android:summary="Manage usage access permission"
+        android:icon="@drawable/usage" />
+    <androidx.preference.Preference
+        android:key="files_access"
+        android:title="Files access"
+        android:summary="Manage permission for files access"
+        android:icon="@drawable/files" />
+    <androidx.preference.Preference
+        android:key="unknown_sources"
+        android:title="Unknown sources"
+        android:summary="Allow to install app from 3rd party sources"
+        android:icon="@drawable/unknown" />
+    <androidx.preference.Preference
+        android:key="display_other"
+        android:title="Display over other apps"
+        android:summary="Manage display ober other apps permission"
+        android:icon="@drawable/overother" />
+    <androidx.preference.Preference
+        android:key="device_notification"
+        android:title="Device and app notification"
+        android:summary="Manage permission for notifications"
+        android:icon="@drawable/notification" />
+</androidx.preference.PreferenceScreen>

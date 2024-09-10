@@ -1,0 +1,44 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.preference.PreferenceCategory android:title="Clock And Time" 
+        android:key="cat1">
+
+        <androidx.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="time_display"
+            android:widgetLayout="@layout/switch_preference_compat"
+            android:title="Time format"
+            android:summary="enable to display 24 hours format of time"/>
+        <androidx.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="clock_seconds"
+            android:widgetLayout="@layout/switch_preference_compat"
+            android:title="Seconds"
+            android:summary="display seconds in clock"/>
+        <androidx.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="center_clock"
+            android:widgetLayout="@layout/switch_preference_compat"
+            android:title="Center clock"
+            android:summary="Centralise the clock in your status bar it may only work on oppo,realme and oneplus"/>
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory android:title="Battery" 
+        android:key="cat2">
+        <androidx.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="full_charge"
+            android:title="Full Charge"
+            android:widgetLayout="@layout/switch_preference_compat"
+            android:summary="Enable it to show your percentage as fully charged"/>
+    </androidx.preference.PreferenceCategory>
+    <androidx.preference.PreferenceCategory android:title="Notifications"
+        android:key="cat3">
+        <androidx.preference.SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="not_icons"
+            android:title="Hide Icons"
+            android:widgetLayout="@layout/switch_preference_compat"
+            android:summary="Enable to hide all notification icons on status bar"/>
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

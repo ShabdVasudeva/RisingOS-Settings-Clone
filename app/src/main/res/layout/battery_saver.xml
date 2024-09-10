@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="?attr/colorSurfaceContainer"
+     tools:context=".BatterySaver">
+
+    <com.google.android.material.appbar.AppBarLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         app:titleTextAppearance="@style/TextAppearance.Widget.Event.Toolbar.Title"
+         android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+             android:layout_height="179dp"
+             android:layout_width="match_parent"
+             app:expandedTitleTextAppearance="@style/Theme.Apw.ToolbarExpanded"
+             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+             android:elevation="0dp"
+             app:expandedTitleGravity="bottom"
+             app:titleCollapseMode="fade"
+             app:statusBarScrim="?attr/colorSurfaceContainer"
+             app:contentScrim="?attr/colorSurfaceContainer"
+             android:background="?attr/colorSurfaceContainer"
+             app:collapsedTitleTextAppearance="@style/Theme.Apw.ToolbarCollapsed"
+             style="?attr/collapsingToolbarLayoutLargeStyle"
+             app:expandedTitleMarginBottom="31dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                 android:layout_height="?attr/actionBarSize"
+                 android:layout_width="match_parent"
+                 android:elevation="0dp"
+                 app:layout_collapseMode="pin"
+                 app:title="Battery Saver"
+                 app:navigationIcon="@drawable/arrow_back_ios_new"
+                 android:id="@+id/toolbar" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:orientation="vertical">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                android:text="Extend your battery life further in critical moments. Battery Saver pauses most apps and notifications. Select your essential apps so you don't miss important notifications or messages."/>
+
+            <ImageView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:src="@drawable/ic_extreme_battery_saver"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp" />
+            
+            <FrameLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/settings_container" />
+            
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/info"
+                    android:id="@+id/info"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="8dp"
+                    android:text="this battery saver is based on your phone stock battery saver on click the switch will save your battery by killing background apps and some more background stops" />
+
+            </LinearLayout>
+            
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

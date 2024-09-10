@@ -1,0 +1,7 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.preference.SwitchPreferenceCompat
+        android:key="wallpaper_plus"
+        android:widgetLayout="@layout/switch_preference_compat"
+        android:title="Wallpaper plus"
+        android:summary="This option will change your device wallpaper automatically based on your battery percentage and state" />
+</androidx.preference.PreferenceScreen>

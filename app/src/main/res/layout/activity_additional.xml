@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="?attr/colorSurfaceContainer"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="?attr/colorSurfaceContainer"
+        app:titleTextAppearance="@style/TextAppearance.Widget.Event.Toolbar.Title"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_height="179dp"
+            android:layout_width="match_parent"
+            app:expandedTitleTextAppearance="@style/Theme.Apw.ToolbarExpanded"
+            app:maxLines="2"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            android:elevation="0dp"
+            app:expandedTitleGravity="left|bottom"
+            app:titleCollapseMode="fade"
+            app:statusBarScrim="?attr/colorSurfaceContainer"
+            app:contentScrim="?attr/colorSurfaceContainer"
+            app:collapsedTitleTextAppearance="@style/Theme.Apw.ToolbarCollapsed"
+            style="?attr/collapsingToolbarLayoutLargeStyle"
+            app:expandedTitleMarginBottom="31dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:title="Additional Settings"
+                android:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/arrow_back_ios_new"
+                android:id="@+id/toolbar" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:padding="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/date"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/icon1"
+                    android:src="@drawable/date"
+                    android:layout_width="24dp" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        style="@style/Text.style.Heading"
+                        android:id="@+id/text1"
+                        android:text="Date and time"
+                        android:layout_width="match_parent" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:id="@+id/subtext1"
+                        android:text="manage your device date and time settings"
+                        android:layout_width="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="20dp"
+                android:id="@+id/kayboard"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/icon2"
+                    android:src="@drawable/keyboard"
+                    android:layout_width="24dp" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        style="@style/Text.style.Heading"
+                        android:id="@+id/text2"
+                        android:text="Keyboard and input"
+                        android:layout_width="match_parent" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:id="@+id/subtext2"
+                        android:text="change keyboard and more"
+                        android:layout_width="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:padding="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/language"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/icon3"
+                    android:src="@drawable/language"
+                    android:layout_width="24dp" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        style="@style/Text.style.Heading"
+                        android:id="@+id/text3"
+                        android:text="Language and region"
+                        android:layout_width="match_parent" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:id="@+id/subtext3"
+                        android:text="change your device language and region settings"
+                        android:layout_width="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="20dp"
+                android:id="@+id/captions"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/icon4"
+                    android:src="@drawable/captions"
+                    android:layout_width="24dp" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        style="@style/Text.style.Heading"
+                        android:id="@+id/text4"
+                        android:text="Captions"
+                        android:layout_width="match_parent" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:id="@+id/subtext4"
+                        android:text="manage your device subtitles settings"
+                        android:layout_width="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:padding="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/backup"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_height="24dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/icon5"
+                    android:src="@drawable/backup"
+                    android:layout_width="24dp" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        style="@style/Text.style.Heading"
+                        android:id="@+id/text5"
+                        android:text="Backup and restore"
+                        android:layout_width="match_parent" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:id="@+id/subtext5"
+                        android:text="manage your device backup and restore settings"
+                        android:layout_width="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

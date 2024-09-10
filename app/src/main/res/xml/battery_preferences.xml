@@ -1,0 +1,38 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <androidx.preference.PreferenceCategory>
+
+        <androidx.preference.Preference
+            android:key="battery_usage"
+            android:title="Battery Usage"
+            android:summary="View usage since last full charge"/>
+        <androidx.preference.Preference
+            android:key="battery_saver"
+            android:title="Battery Saver"
+            android:summary="Tap to turn on Saver"/>
+        
+    </androidx.preference.PreferenceCategory>
+    
+    <androidx.preference.PreferenceCategory
+        android:title="Battery information"
+        android:key="category1">
+    
+        <androidx.preference.Preference
+            android:key="battery_temp"
+            android:title="Battery temperature"/>
+        <androidx.preference.Preference
+            android:key="battery_health"
+            android:title="Battery health"/>
+        <androidx.preference.Preference
+            android:key="battery_technology"
+            android:title="Battery technology"/>
+        <androidx.preference.Preference
+            android:key="battery_percent"
+            android:title="Battery percentage"/>
+        <androidx.preference.Preference
+            android:key="battery_voltage"
+            android:title="Battery voltage"/>
+        
+    </androidx.preference.PreferenceCategory>
+    
+</androidx.preference.PreferenceScreen>

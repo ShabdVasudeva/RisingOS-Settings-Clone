@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="?attr/colorSurfaceContainer"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="?colorSurfaceContainer"
+        app:titleTextAppearance="@style/TextAppearance.Widget.Event.Toolbar.Title"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_height="179dp"
+            android:layout_width="match_parent"
+            app:expandedTitleTextAppearance="@style/Theme.Apw.ToolbarExpanded"
+            app:contentScrim="?colorSurfaceContainer"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            android:elevation="0dp"
+            app:collapsedTitleTextAppearance="@style/Theme.Apw.ToolbarCollapsed"
+            app:expandedTitleGravity="left|bottom"
+            app:titleCollapseMode="scale"
+            style="?attr/collapsingToolbarLayoutLargeStyle"
+            app:expandedTitleMarginBottom="31dp"
+            app:statusBarScrim="?colorSurfaceContainer">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:title="@string/menu_name"
+                android:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/arrow_back_ios_new"
+                android:id="@+id/toolbar" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/topcard"
+                android:padding="26dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_height="270dp"
+                        android:layout_width="match_parent"
+                        android:layout_alignParentLeft="true"
+                        style="?attr/materialCardViewFilledStyle">
+
+                        <LinearLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:id="@+id/lock">
+
+                            <LinearLayout
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:background="#00000030"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:gravity="top"
+                                    android:paddingVertical="5.0dip"
+                                    android:textSize="10dp"
+                                    android:fontFamily="sans-serif"
+                                    android:textColor="@android:color/white"
+                                    android:paddingLeft="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:lineHeight="24.0dip"
+                                    android:id="@+id/lock_date"
+                                    android:text="11,Apr 2024" />
+
+                                <LinearLayout
+                                    android:layout_height="match_parent"
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_gravity="center">
+
+                                    <TextView
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="100dp"
+                                        android:textSize="70dip"
+                                        android:textColor="@android:color/system_accent1_200"
+                                        android:layout_marginTop="-20dp"
+                                        android:typeface="monospace"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:fontFamily="sans-serif"
+                                        android:elegantTextHeight="false"
+                                        android:lineSpacingMultiplier="0.7"
+                                        android:fontVariationSettings="'wght' 300"
+                                        android:id="@+id/lock_time"
+                                        android:text="0233" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_height="270dp"
+                        android:layout_width="match_parent"
+                        style="?attr/materialCardViewFilledStyle"
+                        android:layout_alignParentRight="true">
+
+                        <LinearLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:id="@+id/home"
+                            android:layout_gravity="center">
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="@drawable/bottomcard"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:icon="@drawable/wallpaper"
+                    android:gravity="center"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:id="@+id/textButton"
+                    android:layout_gravity="center"
+                    android:text="Change Wallpaper" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/topcard"
+                    android:padding="16dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/sethome">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="start"
+                        android:textSize="18dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Home settings" />
+
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/home"
+                        android:gravity="end"
+                        android:tint="?attr/colorPrimary"
+                        android:background="@drawable/image_back"
+                        android:padding="8dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/midcard"
+                    android:padding="16dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/palettte">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="start"
+                        android:textSize="18dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Color palette" />
+
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/palette"
+                        android:gravity="end"
+                        android:tint="?attr/colorPrimary"
+                        android:background="@drawable/image_back"
+                        android:padding="8dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/midcard"
+                    android:padding="16dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/theme">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="start"
+                        android:textSize="18dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Device theme" />
+
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/dark"
+                        android:gravity="end"
+                        android:tint="?attr/colorPrimary"
+                        android:background="@drawable/image_back"
+                        android:padding="8dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/midcard"
+                    android:padding="16dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/dream">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="start"
+                        android:textSize="18dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Daydream" />
+
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/dream"
+                        android:gravity="end"
+                        android:tint="?attr/colorPrimary"
+                        android:background="@drawable/image_back"
+                        android:padding="8dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/bottomcard"
+                    android:padding="16dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/status">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="start"
+                        android:textSize="18dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Status droid" />
+
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/status"
+                        android:gravity="end"
+                        android:tint="?attr/colorPrimary"
+                        android:background="@drawable/image_back"
+                        android:padding="8dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:elevation="16dp"
+        android:backgroundTint="?colorSurfaceContainer"
+        style="@style/Widget.Material3.BottomSheet"
+        app:behavior_hideable="true"
+        android:id="@+id/frame">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/close"
+                    android:gravity="start"
+                    android:id="@+id/close"
+                    style="?attr/materialIconButtonStyle"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="-24dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="Wallpapers Gallery" />
+
+            </LinearLayout>
+            <androidx.core.widget.NestedScrollView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="vertical"
+                        android:id="@+id/photoback"
+                        android:background="@drawable/photo_back"
+                        android:paddingVertical="50dp">
+                        <Button
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            app:icon="@drawable/wallpaper"
+                            android:gravity="center"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:id="@+id/textbut"
+                            android:layout_gravity="center"
+                            android:text="Photos" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:textSize="18dp"
+                            android:text="Waze Walls" />
+                        <HorizontalScrollView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_height="180dp"
+                                    android:layout_width="120dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    style="?attr/materialCardViewFilledStyle"
+                                    app:cardCornerRadius="12dp"
+                                    android:id="@+id/wall1">
+
+                                    <LinearLayout
+                                        android:layout_height="match_parent"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:background="@drawable/wall1"
+                                        android:orientation="vertical">
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_height="180dp"
+                                    android:layout_width="120dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    style="?attr/materialCardViewFilledStyle"
+                                    app:cardCornerRadius="12dp"
+                                    android:id="@+id/wall2">
+
+                                    <LinearLayout
+                                        android:layout_height="match_parent"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:background="@drawable/wall2"
+                                        android:orientation="vertical">
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_height="180dp"
+                                    android:layout_width="120dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    style="?attr/materialCardViewFilledStyle"
+                                    app:cardCornerRadius="12dp"
+                                    android:id="@+id/wall3">
+
+                                    <LinearLayout
+                                        android:layout_height="match_parent"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:background="@drawable/wall3"
+                                        android:orientation="vertical">
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_height="180dp"
+                                    android:layout_width="120dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    style="?attr/materialCardViewFilledStyle"
+                                    app:cardCornerRadius="12dp"
+                                    android:id="@+id/wall4">
+
+                                    <LinearLayout
+                                        android:layout_height="match_parent"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:background="@drawable/wall4"
+                                        android:orientation="vertical">
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_height="180dp"
+                                    android:layout_width="120dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    style="?attr/materialCardViewFilledStyle"
+                                    app:cardCornerRadius="12dp"
+                                    android:id="@+id/wall5">
+
+                                    <LinearLayout
+                                        android:layout_height="match_parent"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:background="@drawable/wall5"
+                                        android:orientation="vertical">
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_height="180dp"
+                                    android:layout_width="120dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    style="?attr/materialCardViewFilledStyle"
+                                    app:cardCornerRadius="12dp"
+                                    android:id="@+id/wall6">
+
+                                    <LinearLayout
+                                        android:layout_height="match_parent"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:background="@drawable/wall6"
+                                        android:orientation="vertical">
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_height="180dp"
+                                    android:layout_width="120dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    style="?attr/materialCardViewFilledStyle"
+                                    app:cardCornerRadius="12dp"
+                                    android:id="@+id/wall7">
+
+                                    <LinearLayout
+                                        android:layout_height="match_parent"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:background="@drawable/wall7"
+                                        android:orientation="vertical">
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+                        <TextView
+                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:textSize="18dp"
+                            android:text="Gradients Lab" />
+                        <EditText
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="Hex value of 1st color (#xxxxxx)"
+                            android:layout_marginRight="20dp"
+                            android:id="@+id/edit" />
+                        <EditText
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="Hex value of 2nd color (#xxxxxx)"
+                            android:layout_marginRight="20dp"
+                            android:id="@+id/edit2" />
+                        <Button
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:id="@+id/setWall"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:text="Set Gradient As Wall"
+                            android:layout_marginRight="20dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="18dp"
+                        android:text="Live Wallpapers" />
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/photo_back"
+                        android:paddingVertical="30dp">
+                        <Button
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            app:icon="@drawable/wallpaper"
+                            android:gravity="center"
+                            style="@style/Widget.Material3.Button.TextButton"
+                            android:id="@+id/livewall"
+                            android:layout_gravity="center"
+                            android:text="Live Wallpapers" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

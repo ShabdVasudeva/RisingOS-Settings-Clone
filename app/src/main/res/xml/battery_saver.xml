@@ -1,0 +1,10 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <androidx.preference.PreferenceCategory>
+        <androidx.preference.SwitchPreferenceCompat
+            android:key="battery_saver"
+            android:textSize="20dp"
+            android:widgetLayout="@layout/switch_preference_compat"
+            android:title="Battery saver"
+            android:summary="Tap here to toggle"/>
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

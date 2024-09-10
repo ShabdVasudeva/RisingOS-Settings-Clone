@@ -1,0 +1,23 @@
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <androidx.preference.SwitchPreferenceCompat
+        android:key="animate_up"
+        android:title="Animations"
+        android:summary="Toggle it to enable animations in app intent transitions."
+        android:textSize="20dp"
+        android:widgetLayout="@layout/switch_preference_compat">
+    </androidx.preference.SwitchPreferenceCompat>
+    
+    <androidx.preference.Preference
+        android:key="open_walls"
+        android:title="Wallpapers And Styles"
+        android:summary="Access wallpapers and Styles">
+    </androidx.preference.Preference>
+    
+    <androidx.preference.Preference
+        android:key="about_us"
+        android:title="About Us"
+        android:summary="If you're curious to know who developed this app or want to appriciate team apw please have a visit our web page.">
+    </androidx.preference.Preference>
+
+</androidx.preference.PreferenceScreen>
